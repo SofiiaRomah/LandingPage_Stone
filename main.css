@@ -48,7 +48,7 @@ body {
   max-height: 20px;
 }
 
-/* Header */
+/* Header  */
 
 .main-title {
   font-size: x-large;
@@ -194,12 +194,11 @@ img {
   display: flex;
   justify-content: space-between;
   /* max-height: 500px; */
-  padding: 20px 0px;
+  padding: 58px;
 }
 
 .left-about {
-  display: flex;
-  flex: 1;
+ 
 }
 
 .left-about div:nth-child(1) {
@@ -253,9 +252,9 @@ img {
     position: absolute;
     visibility: hidden;
     opacity: 0.4;
-    height: 0;
+    width: 100%;
     background: var(--accent-color);
-    right: 10px;
+    right: 0px;
     top: 45px;
     padding: 10px 0;
     border-radius: 10px;
@@ -276,7 +275,7 @@ img {
   .navitem {
     display: flex;
     text-decoration: none;
-    padding: 7px;
+    padding: 15px;
   }
 
   .navbar.toggled .nav-menu {
@@ -324,6 +323,10 @@ img {
   .about-content {
     padding: 0px 20px 10px;
   }
+
+  .about-section{
+    padding: 39px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -364,5 +367,9 @@ img {
 
   .about-content {
     padding: inherit;
+  }
+
+  .about-title {
+  padding: 10px 20px 0 0;
   }
 }
