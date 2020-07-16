@@ -234,6 +234,7 @@ img {
 }
 
 /* Benefits section */
+
 .benefits-section {
   display: flex;
   justify-content: space-between;
@@ -289,6 +290,127 @@ img {
   max-height: 340px;
 }
 
+/* Footer */
+
+footer {
+  position: absolute;
+  display: flex;
+  width: calc(100% - 120px);
+  margin: 60px;
+  background-color: var(--accent-background);
+  color: var(--accent-font-color);
+}
+
+footer > div {
+  padding: 20px;
+}
+
+.form-title {
+  padding: 20px;
+  font-size: large;
+  font-weight: bold;
+  color: var(--accent-font-color);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid var(--accent-font-color);
+  transition: 0.3s;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  display: block;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.questions label {
+  top: -5px;
+}
+
+input[type="text"]:focus ~ label {
+  display: block;
+  color: black;
+  top: -20px;
+  font-size: 14px;
+}
+
+input[type="text"]:focus ~ .enter {
+  background-color: #0f1f7a;
+  position: absolute;
+  content: " ";
+  height: 1px;
+  right: 45%;
+  top: 42px;
+  transform: scaleX(5);
+}
+
+.enter {
+  transition: all ease 0.5s;
+  width: 10.1%;
+  transform: scaleX(1);
+}
+
+input:focus {
+  content: none;
+}
+
+form {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto); */
+  grid-template: "fname lname" "email number" "questions questions" ". form-button";
+}
+
+.fname {
+  grid-area: fname;
+}
+
+.lname {
+  grid-area: lname;
+}
+
+.email {
+  grid-area: email;
+}
+
+.number {
+  grid-area: number;
+}
+
+.questions {
+  grid-area: questions;
+}
+
+.form-button {
+  grid-area: form-button;
+}
+
+.form-button button {
+  width: 100%;
+  height: 40px;
+  color: var(--accent-background);
+  background-color: var(--accent-font-color);
+}
+
+form > div {
+  margin: 20px;
+  position: relative;
+}
+
+.form-info {
+  color: var(--accent-font-color);
+  padding-left: 20px;
+}
+
 @media screen and (max-width: 1024px) {
   .main-section {
     padding: 10px 30px;
@@ -316,6 +438,19 @@ img {
 
   .benefit img {
     max-height: 280px;
+  }
+
+  .benefits-title {
+    padding: 20px 40px 10px;
+  }
+
+  .benefits-section {
+    padding: 10px 40px;
+  }
+
+  footer {
+    margin: 40px;
+    width: calc(100% - 80px);
   }
 }
 
@@ -411,6 +546,11 @@ img {
   .benefit-left-block {
     min-width: 3px;
   }
+
+  footer {
+    margin: 30px;
+    width: calc(100% - 60px);
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -478,5 +618,15 @@ img {
   .benefit-left-block {
     min-width: 3px;
     height: unset;
+  }
+
+  footer {
+    flex-direction: column;
+    margin: 25px;
+    width: calc(100% - 50px);
+  }
+
+  form {
+    grid-template: "fname" "lname" "email" "number" "questions" "form-button";
   }
 }
