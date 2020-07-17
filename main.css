@@ -7,6 +7,7 @@
 :root {
   --accent-background: rgb(50, 61, 55);
   --accent-font-color: rgb(247, 247, 247);
+  --not-accent-font-color: rgb(224, 224, 224);
 }
 
 .theme-light {
@@ -251,7 +252,7 @@ img {
 }
 
 .benefit-title {
-  padding: 10px 0;
+  padding: 15px 0;
   color: var(--title-color);
   font-weight: bold;
   text-overflow: ellipsis;
@@ -303,6 +304,7 @@ footer {
 
 footer > div {
   padding: 20px;
+  flex: 1 1;
 }
 
 .form-title {
@@ -312,61 +314,41 @@ footer > div {
   color: var(--accent-font-color);
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  background-color: transparent;
-  border: 0;
-  outline: 0;
-  border-bottom: 1px solid var(--accent-font-color);
-  transition: 0.3s;
+form > div {
+  margin: 20px;
+  position: relative;
 }
 
 label {
   position: absolute;
-  top: 10px;
-  display: block;
-  font-size: 1rem;
-  transition: all 0.5s ease;
-  pointer-events: none;
+  top: 10pxpx;
+  left: 0;
+  width: 100%;
+  color: var(--not-accent-font-color);
+  transition: 0.3s all;
+  cursor: text;
 }
 
-.questions label {
-  top: -5px;
+input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  /* padding: 20px 0; */
+  padding-top: 20px;
+  border-bottom: 1px solid var(--not-accent-font-color);
+  box-shadow: none;
+  color: var(--accent-font-color);
+  font-weight: bold;
 }
 
-input[type="text"]:focus ~ label {
-  display: block;
-  color: black;
-  top: -20px;
-  font-size: 14px;
-}
-
-input[type="text"]:focus ~ .enter {
-  background-color: #0f1f7a;
-  position: absolute;
-  content: " ";
-  height: 1px;
-  right: 45%;
-  top: 42px;
-  transform: scaleX(5);
-}
-
-.enter {
-  transition: all ease 0.5s;
-  width: 10.1%;
-  transform: scaleX(1);
-}
-
-input:focus {
-  content: none;
+input:focus ~ label {
+  font-size: 15px;
+  top: -12px;
 }
 
 form {
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(100px, auto); */
   grid-template: "fname lname" "email number" "questions questions" ". form-button";
 }
 
@@ -399,15 +381,11 @@ form {
   height: 40px;
   color: var(--accent-background);
   background-color: var(--accent-font-color);
-}
-
-form > div {
-  margin: 20px;
-  position: relative;
+  outline: none;
 }
 
 .form-info {
-  color: var(--accent-font-color);
+  color: var(--not-accent-font-color);
   padding-left: 20px;
 }
 
