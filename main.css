@@ -255,9 +255,23 @@ img {
   padding: 15px 0;
   color: var(--title-color);
   font-weight: bold;
+}
+
+.benefit-title p {
+  margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  z-index: 1;
+}
+
+.benefit-title p:hover {
+  position: relative;
+  overflow: visible;
+  width: fit-content;
+  background-color: var(--accent-color);
+  z-index: 3;
+  padding-right: 10px;
 }
 
 .benefits-section .benefit {
