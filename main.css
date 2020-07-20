@@ -353,7 +353,6 @@ input {
   border: 0;
   outline: 0;
   background-color: transparent;
-  /* padding: 20px 0; */
   padding-top: 20px;
   border-bottom: 1px solid var(--not-accent-font-color);
   box-shadow: none;
@@ -458,10 +457,10 @@ form {
     opacity: 0.4;
     height: 0;
     background: var(--accent-color);
-    right: 10px;
-    top: 45px;
-    padding: 10px 0;
-    border-radius: 10px;
+    right: 0px;
+    left: 0px;
+    top: 50px;
+    padding: 10px;
     box-shadow: 1px 1px 2px 1px rgba(var(--font-color), 0.4);
     transition: 0.3s ease-in-out;
     flex-direction: column;
