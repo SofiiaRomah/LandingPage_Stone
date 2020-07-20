@@ -69,6 +69,7 @@ body {
   width: 100%;
   padding: 10px 30px;
   background-color: var(--bg-color);
+  z-index: 1;
 }
 
 .nav-flex {
@@ -201,17 +202,17 @@ img {
   padding: 20px 0px;
 }
 
-.left-about {
+.about-section .left-about {
   display: flex;
   grid-area: left-about;
 }
 
-.left-about div:nth-child(1) {
+.about-section .left-about div:nth-child(1) {
   background-color: var(--accent-background);
   min-width: 60px;
 }
 
-.about-title {
+.about-section .about-title {
   display: flex;
   align-items: flex-end;
   padding: 20px 60px 0;
@@ -221,7 +222,7 @@ img {
   grid-area: about-title;
 }
 
-.about-title > div {
+.about-section .about-title > div {
   display: flex;
   align-items: center;
 }
@@ -233,7 +234,7 @@ img {
   background-color: var(--accent-background);
 }
 
-.about-content {
+.about-section .about-content {
   padding: 0px 60px 20px;
   color: var(--font-color);
   grid-area: about-content;
@@ -256,13 +257,13 @@ img {
   color: var(--title-color);
 }
 
-.benefit-title {
+.benefits-section .benefit-title {
   padding: 15px 0;
   color: var(--title-color);
   font-weight: bold;
 }
 
-.benefit-title p {
+.benefits-section .benefit-title p {
   margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -270,7 +271,7 @@ img {
   z-index: 1;
 }
 
-.benefit-title p:hover {
+.benefits-section .benefit-title p:hover {
   position: relative;
   overflow: visible;
   width: fit-content;
@@ -286,11 +287,11 @@ img {
   width: calc(33.33333% - 60px);
 }
 
-.benefit-bottom-block {
+.benefits-section .benefit-bottom-block {
   display: flex;
 }
 
-.benefit-left-block {
+.benefits-section .benefit-left-block {
   width: 5px;
   height: 100%;
   border-radius: 9px;
@@ -412,19 +413,19 @@ form {
     padding: 10px 30px;
   }
 
-  .left-about img {
+  .about-section .left-about img {
     padding-right: 20px;
   }
 
-  .left-about div:nth-child(1) {
+  .about-section .left-about div:nth-child(1) {
     min-width: 40px;
   }
 
-  .about-title {
+  .about-section .about-title {
     padding: 20px 40px 0;
   }
 
-  .about-content {
+  .about-section .about-content {
     padding: 0px 40px 20px;
   }
 
@@ -432,7 +433,11 @@ form {
     grid-template: "left-about about-title" "left-about about-content"/ 3fr 2fr;
   }
 
-  .benefit img {
+  .benefits-section {
+    padding: 20px 40px;
+  }
+
+  .benefits-section .benefit img {
     max-height: 280px;
   }
 
@@ -440,7 +445,7 @@ form {
     padding: 20px 40px 10px;
   }
 
-  .benefits-section {
+  .benefits-section .benefits-section {
     padding: 10px 40px;
   }
 
@@ -511,23 +516,23 @@ form {
     padding: 0px 20px 20px;
   }
 
-  .left-about div:nth-child(1) {
+  .about-section .left-about div:nth-child(1) {
     min-width: 30px;
   }
 
-  .left-about img {
+  .about-section .left-about img {
     padding-right: 20px;
   }
 
-  .about-title {
+  .about-section .about-title {
     padding: 10px 30px 0;
   }
 
-  .about-content {
+  .about-section .about-content {
     padding: 0px 30px 10px;
   }
 
-  .about-section {
+  .about-section .about-section {
     grid-template: "left-about about-title" "left-about about-content"/ 3fr 2fr;
   }
 
@@ -539,7 +544,7 @@ form {
     padding: 20px 30px 10px;
   }
 
-  .benefit-left-block {
+  .benefits-section .benefit-left-block {
     min-width: 3px;
   }
 
@@ -559,7 +564,7 @@ form {
     min-width: 300px;
   }
 
-  .left-about .img-div {
+  .about-section .left-about .img-div {
     height: 400px;
     max-height: 100%;
   }
@@ -569,21 +574,21 @@ form {
     padding: 15px 25px;
   }
 
-  .left-about img {
+  .about-section .left-about img {
     padding: 0px;
   }
 
-  .left-about div:nth-child(1) {
+  .about-section .left-about div:nth-child(1) {
     display: none;
   }
 
-  .about-title {
+  .about-section .about-title {
     font-size: large;
     padding: 0px;
     padding-bottom: 20px;
   }
 
-  .about-content {
+  .about-section .about-content {
     padding: 0px;
   }
 
@@ -611,9 +616,13 @@ form {
     padding: 20px 25px 10px;
   }
 
-  .benefit-left-block {
+  .benefits-section .benefit-left-block {
     min-width: 3px;
     height: unset;
+  }
+
+  .benefits-section .benefit img {
+    height: 332px;
   }
 
   footer {

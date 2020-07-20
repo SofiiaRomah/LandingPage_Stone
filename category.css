@@ -1,0 +1,141 @@
+/* Category description section  */
+
+.description-section {
+  display: grid;
+  grid-template: "left-about about-title" 200px "left-about about-content" 200px "left-about about-content" 200px/1fr 1fr;
+  padding: 20px 60px;
+}
+
+.description-section .left-about {
+  display: flex;
+  grid-area: left-about;
+}
+
+.description-section .about-title {
+  display: flex;
+  align-items: flex-end;
+  padding: 20px 60px 0;
+  font-weight: bold;
+  font-size: larger;
+  color: var(--title-color);
+  grid-area: about-title;
+}
+
+.description-section .about-title > div {
+  display: flex;
+  align-items: center;
+}
+
+.description-section .about-title .square-icon {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: var(--accent-background);
+}
+
+.description-section .about-content {
+  padding: 0px 60px 20px;
+  color: var(--font-color);
+  grid-area: about-content;
+}
+
+/* gallery section  */
+.gallery-section {
+  display: grid;
+  grid-template: "img-1 img-2 img-3" 300px "img-4 img-5 img-6" 300px "img-7 img-8 img-9" 300px/ 1fr 1fr 1fr;
+  padding: 20px 60px;
+  gap: 30px;
+}
+
+.img-1 {
+  grid-area: img-1;
+}
+
+.img-2 {
+  grid-area: img-2;
+}
+
+.img-3 {
+  grid-area: img-3;
+}
+
+.img-4 {
+  grid-area: img-4;
+}
+
+.img-5 {
+  grid-area: img-5;
+}
+
+.img-6 {
+  grid-area: img-6;
+}
+
+.img-7 {
+  grid-area: img-7;
+}
+
+.img-8 {
+  grid-area: img-8;
+}
+
+.img-9 {
+  grid-area: img-9;
+}
+
+@media screen and (max-width: 1024px) {
+  .description-section {
+    grid-template: "left-about about-title" "left-about about-content"/ 3fr 2fr;
+    padding: 20px 40px;
+  }
+
+  .description-section .about-title {
+    padding: 20px 40px 0;
+  }
+
+  .description-section .about-content {
+    padding: 0px 40px 20px;
+  }
+
+  .gallery-section {
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .description-section {
+    padding: 20px 30px;
+  }
+
+  .description-section .about-title {
+    padding: 10px 30px 0;
+  }
+
+  .description-section .about-content {
+    padding: 0px 30px 10px;
+  }
+
+  .gallery-section {
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .description-section {
+    padding: 15px 25px;
+    grid-template: "about-title" "left-about" "about-content";
+  }
+
+  .description-section .about-title {
+    padding: 0;
+  }
+
+  .description-section .about-content {
+    padding: 0;
+  }
+
+  .gallery-section {
+    grid-template: "img-1" 332px "img-2" 332px "img-3" 332px "img-4" 332px "img-5" 332px "img-6" 332px "img-7" 332px "img-8" 332px "img-9" 332px;
+    padding: 25px;
+  }
+}

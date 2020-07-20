@@ -8,12 +8,12 @@
     />
 
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="category.css" />
     <script type="text/javascript" src="index.js"></script>
 
     <title>ArtStone</title>
     <link rel="shortcut icon" href="images/stone.png" />
   </head>
-
   <body>
     <!-- Header  -->
     <header class="navbar">
@@ -28,7 +28,7 @@
             />
           </a>
         </div>
-        <a href="#begin" class="main-title">Art Stone</a>
+        <a href="index.html" class="main-title">Art Stone</a>
       </div>
 
       <button class="navbar-toggler" onclick="toggleNavbar(event)">
@@ -40,15 +40,20 @@
       <div class="nav-flex nav-menu">
         <ul>
           <li>
-            <a href="#about" onClick="toggleNavbar()" class="navitem">About</a>
+            <a href="index.html#about" onClick="toggleNavbar()" class="navitem"
+              >About</a
+            >
           </li>
           <li>
-            <a href="#benefits" onClick="toggleNavbar()" class="navitem"
+            <a
+              href="index.html#benefits"
+              onClick="toggleNavbar()"
+              class="navitem"
               >Benefits</a
             >
           </li>
           <li>
-            <a href="#contact" onClick="toggleNavbar()" class="navitem"
+            <a href="index.html#footer" onClick="toggleNavbar()" class="navitem"
               >Contact Us</a
             >
           </li>
@@ -58,64 +63,9 @@
     </header>
 
     <main>
-      <!-- Main Section -->
-      <section id="begin" class="main-section">
-        <div class="main-div">
-          <div class="img-div">
-            <img src="images/stairs.jpg" />
-          </div>
-          <div class="title-main" onclick="location.href='category.html';">
-            <button class="category-bnt">
-              Stairs
-            </button>
-          </div>
-        </div>
-        <div class="main-div">
-          <div class="img-div">
-            <img src="images/wall.jpg" />
-          </div>
-          <div class="title-main" onclick="location.href='category.html';">
-            <button class="category-bnt">
-              Walls
-            </button>
-          </div>
-        </div>
-        <div class="main-div">
-          <div class="img-div">
-            <img src="images/camin.jpg" />
-          </div>
-          <div class="title-main" onclick="location.href='category.html';">
-            <button class="category-bnt">
-              Fireplaces
-            </button>
-          </div>
-        </div>
-        <div class="main-div">
-          <div class="img-div">
-            <img src="images/colone.png" />
-          </div>
-          <div class="title-main" onclick="location.href='category.html';">
-            <button class="category-bnt">
-              Columns
-            </button>
-          </div>
-        </div>
-        <div class="main-div">
-          <div class="img-div">
-            <img src="images/entrance.jpg" />
-          </div>
-          <div class="title-main" onclick="location.href='category.html';">
-            <button class="category-bnt">
-              Entrances
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Us Section -->
-      <section id="about" class="about-section">
+      <!-- Description Section -->
+      <section class="description-section">
         <div class="left-about">
-          <div></div>
           <div class="img-div">
             <img src="images/about.jpg" />
           </div>
@@ -123,7 +73,7 @@
         <div class="about-title">
           <div>
             <div class="square-icon"></div>
-            About Us
+            Category
           </div>
         </div>
         <div class="about-content">
@@ -148,15 +98,8 @@
 
       <!-- Benefits Section -->
       <section id="benefits">
-        <div class="benefits-title">
-          <div class="square-icon"></div>
-          Why we?
-        </div>
         <div class="benefits-section">
           <div class="benefit">
-            <div class="benefit-title">
-              <p>Extensive work experience</p>
-            </div>
             <div class="img-div">
               <img src="images/benefit1.jpg" />
             </div>
@@ -169,9 +112,6 @@
             </div>
           </div>
           <div class="benefit">
-            <div class="benefit-title">
-              <p>High accuracy of work</p>
-            </div>
             <div class="img-div">
               <img src="images/benefit2.jpg" />
             </div>
@@ -184,9 +124,6 @@
             </div>
           </div>
           <div class="benefit">
-            <div class="benefit-title">
-              <p>Durability</p>
-            </div>
             <div class="img-div">
               <img src="images/benefit3.jpg" />
             </div>
@@ -200,15 +137,30 @@
           </div>
         </div>
       </section>
+
+      <!-- Gallery section  -->
+      <section id="gallery">
+        <div class="gallery-section">
+          <div class="img-1 img-div"><img src="images/benefit3.jpg" /></div>
+          <div class="img-2 img-div"><img src="images/benefit2.jpg" /></div>
+          <div class="img-3 img-div"><img src="images/benefit2.jpg" /></div>
+          <div class="img-4 img-div"><img src="images/benefit2.jpg" /></div>
+          <div class="img-5 img-div"><img src="images/benefit2.jpg" /></div>
+          <div class="img-6 img-div"><img src="images/benefit2.jpg" /></div>
+          <div class="img-7 img-div"><img src="images/benefit2.jpg" /></div>
+          <div class="img-8 img-div"><img src="images/benefit2.jpg" /></div>
+          <div class="img-9 img-div"><img src="images/benefit2.jpg" /></div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer section -->
-    <footer id="contact">
+    <footer id="#footer">
       <div class="left-footer">
         <div class="form-title">
           Ask us! You will get the answer soon.
         </div>
-        <form>
+        <form action="#footer">
           <div class="fname">
             <input type="text" id="fname" name="fname" />
             <label for="fname">First Name</label>
@@ -230,7 +182,7 @@
             <label for="questions">Write your questions here</label>
           </div>
           <div class="form-button">
-            <button>
+            <button type="submit">
               Send
             </button>
           </div>
