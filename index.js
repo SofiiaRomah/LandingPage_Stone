@@ -63,3 +63,30 @@ function toggleNavbar(event) {
     navMenu.style.height = navHeight + "px";
   }
 }
+
+function sendEmail(event) {
+  var firstName, lastName, number, email, questions;
+  firstName = document.getElementById("fname");
+  lastName = document.getElementById("lname");
+  email = document.getElementById("email");
+  number = document.getElementById("number");
+  questions = document.getElementById("questions");
+
+  event.preventDefault();
+  Email.send({
+    UseDefaultCredentials: false,
+    EnableSsl: true,
+    SecureToken: "592b5828-e0b5-4197-8aaf-1b18c50064ba",
+    To: "sofiiaromah@gmail.com",
+    From: "sofiiaromah@gmail.com",
+    Subject: "questions",
+    Body: `First Name: ${firstName.value} <br /> Last Name: ${lastName.value} <br />
+    Email: ${email.value} <br /> Phone Number: ${number.value} <br /> Question: ${questions.value}`,
+  }).then((message) => console.log("mail sent successfully", message));
+
+  firstName.value = "";
+  lastName.value = "";
+  email.value = "";
+  number.value = "";
+  questions.value = "";
+}

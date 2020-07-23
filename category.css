@@ -127,7 +127,9 @@
   }
 
   .description-section .about-title {
+    font-size: large;
     padding: 0;
+    padding-bottom: 20px;
   }
 
   .description-section .about-content {

@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="main.css" />
     <link rel="stylesheet" type="text/css" href="category.css" />
     <script type="text/javascript" src="index.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <title>ArtStone</title>
     <link rel="shortcut icon" href="images/stone.png" />
@@ -53,7 +54,10 @@
             >
           </li>
           <li>
-            <a href="index.html#footer" onClick="toggleNavbar()" class="navitem"
+            <a
+              href="index.html#contact"
+              onClick="toggleNavbar()"
+              class="navitem"
               >Contact Us</a
             >
           </li>
@@ -160,7 +164,7 @@
         <div class="form-title">
           Ask us! You will get the answer soon.
         </div>
-        <form action="#footer">
+        <form method="post">
           <div class="fname">
             <input type="text" id="fname" name="fname" />
             <label for="fname">First Name</label>
@@ -170,7 +174,7 @@
             <label for="lname">Last Name</label>
           </div>
           <div class="email">
-            <input type="text" id="email" name="email" />
+            <input type="text" id="email" name="email" required />
             <label for="email">Email</label>
           </div>
           <div class="number">
@@ -178,11 +182,11 @@
             <label for="number">Phone number</label>
           </div>
           <div class="questions">
-            <input type="text" id="questions" name="questions" />
+            <input type="text" id="questions" name="questions" required />
             <label for="questions">Write your questions here</label>
           </div>
           <div class="form-button">
-            <button type="submit">
+            <button type="submit" onclick="sendEmail(event)">
               Send
             </button>
           </div>
